@@ -22,7 +22,7 @@ app.add_middleware(
 )
 
 # 2. Load Model
-# Pastikan file 'random_forest_model.joblib' ada di folder yang sama dengan main.py
+# Pastikan file 'model.joblib' ada di folder yang sama dengan main.py
 try:
     model = joblib.load("model.joblib")
     print("Model berhasil dimuat.")
