@@ -61,11 +61,14 @@ export const PredictionProvider = ({ children }: { children: ReactNode }) => {
         Place_of_Delivery: formData.Place_of_Delivery,
       };
 
-      const response = await fetch("/api/predict", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        "https://neogurad-production.up.railway.app/",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        }
+      );
 
       if (!response.ok) {
         throw new Error(`Server Error: ${response.statusText}`);
