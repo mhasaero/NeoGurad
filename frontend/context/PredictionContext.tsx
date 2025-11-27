@@ -62,7 +62,7 @@ export const PredictionProvider = ({ children }: { children: ReactNode }) => {
       };
 
       const response = await fetch(
-        "https://neogurad-production.up.railway.app/",
+        "https://neogurad-production.up.railway.app/predict",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
